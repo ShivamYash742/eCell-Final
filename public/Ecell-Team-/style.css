@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Prompt", sans-serif;
+
+  & a {
+    text-decoration: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  position: relative;
+  background-color: white;
+  /* overflow: hidden; */
+}
+
+.hmenu {
+  display: none;
+}
+
+.ham {
+  display: none;
+}
+
+/* <--------------Navbar-------------> */
+
+nav {
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(11, 11, 113);
+
+  height: 56px;
+  width: 100%;
+  padding: 30px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+  & ul {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+
+    & li a {
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      color: white;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.navlogo {
+  display: flex;
+  align-items: center;
+  font-family: "Prompt", sans-serif;
+  gap: 20px;
+
+  & h2 {
+    font-size: 1.8rem;
+  }
+
+  & img {
+    height: 50px;
+    width: 56px;
+  }
+}
+
+
+/* bg image style */
+.bg-team {
+  background: rgba(0, 0, 0, 0.6) url(./images/teamphoto.jpg) center center/cover;
+  background-blend-mode: darken;
+  transform: scale(1);
+
+  height: 100vh;
+  margin: -30px 0px 0px 0px;
+}
+
+.heroOverlay {
+  position: absolute;
+  height: 110%;
+  top: 0px;
+  width: 100%;
+}
+
+
+/* title - get in touch with us */
+
+.heading-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3.5rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+
+/* team section start from here */
+
+.team-section {
+  height: 100vh;
+}
+
+.meetOurTeam {
+  margin: 92px 0px 10px 0px;
+  text-align: center;
+  font-size: 3rem;
+  color: rgb(11, 11, 113);
+}
+
+/* To rotate images which are tilted  */
+
+.r1 {
+  transform: rotate(-3deg);
+}
+
+
+/* for those image which have irregular size */
+
+.shift {
+  position: relative;
+  left: 40px;
+  border-radius: 5px;
+}
+
+.s1 {
+  position: relative;
+
+  margin: 37px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.x1 {
+  display: flex;
+  gap: 30px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main-cart {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart {
+  margin: 51px 0px 9px 0px;
+  padding: 0px 6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-img {
+  position: absolute;
+  background-position: center;
+  z-index: 1;
+  width: 22vw;
+  filter: invert(0.3);
+}
+
+.br {
+  border-radius: 15px;
+}
+
+.member-photo {
+  position: relative;
+
+  z-index: 2;
+  width: 20vw;
+}
+
+.position {
+  text-decoration: underline;
+  font-size: 2.6rem;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 4px;
+  text-decoration-color: #000000;
+  text-align: center;
+}
+
+.member-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 100;
+}
+
+.member-info span p {
+  font-size: 1.4rem;
+  margin-top: 0px;
+}
+
+.member-info h1 {
+  font-size: 2.5rem;
+}
+
+.member-info button {
+  background-color: rgb(255, 255, 255);
+}
+
+.member-info img {
+  width: 44px;
+  margin: 0px 15px;
+}
+
+.front-page {
+  height: 107vh;
+  overflow: hidden;
+}
+
+.cross {
+  filter: invert(1);
+}
+
+.ham {
+  filter: invert(1);
+}
+
+.width-problem {
+  width: 16vw;
+}
+
+.cart {
+
+}
+

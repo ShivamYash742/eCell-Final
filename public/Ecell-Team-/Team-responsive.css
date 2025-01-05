@@ -1,0 +1,110 @@
+
+
+@media (max-width: 1040px) {
+    .bg-img {
+      width: 30vh;
+    }
+  
+    .member-photo {
+      width: 28vh;
+    }
+  
+    .cart {
+      padding: 0px 10vh;
+    }
+  
+    .member-info h1 {
+      font-size: 2.4rem;
+    }
+  
+    .member-info span p {
+      font-size: 1.2rem;
+    }
+  
+    .heading-title {
+      font-size: 2.5rem;
+      width: 95%;
+    }
+  
+    .x1 {
+      display: flex;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .cart {
+      padding: 0px 6vh;
+    }
+  
+    .meetOurTeam {
+      font-size: 2.1rem;
+    }
+  
+    .position {
+      font-size: 1.9rem;
+    }
+  
+    .member-info h1 {
+      font-size: 1.7rem;
+    }
+  
+    .member-info span p {
+      font-size: 1rem;
+    }
+  
+    .shift {
+      position: relative;
+      left: 20px;
+      border-radius: 5px;
+    }
+  }
+  
+  @media (min-width: 1800px) {
+    .member-info {
+      margin: 1vw 0px 1vw 0px;
+      position: relative;
+      z-index: 100;
+    }
+  
+    .cart {
+      margin: 40px 0px 9px 0px;
+      width: 19vw;
+    }
+  
+    .x1 {
+      display: flex;
+      width: 70%;
+      gap: 105px;
+    }
+  
+    .main-cart {
+      display: flex;
+      margin: auto;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      padding: 0px 5vw;
+    }
+  
+    .heading-title {
+      font-size: 6rem;
+    }
+  
+    .meetOurTeam {
+      font-size: 5.5rem;
+    }
+  
+    .position {
+      font-size: 4.4rem;
+    }
+  
+    .member-info h1 {
+      font-size: 4.1rem;
+    }
+  
+    .member-info span p {
+      font-size: 2rem;
+      margin-top: 0px;
+    }
+  }
+  

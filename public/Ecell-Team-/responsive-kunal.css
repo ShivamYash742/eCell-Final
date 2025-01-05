@@ -1,0 +1,274 @@
+
+@media (max-width: 1028px) {
+    .hmenu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        color: white;
+        z-index: 14;
+        height: 100%;
+        width: 100%;
+        background-color: #0b0b71;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+
+        & .head {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            & .hlogo {
+                display: flex;
+                align-items: center;
+                font-family: "Prompt", sans-serif;
+                gap: 20px;
+
+                & img {
+                    height: 100px;
+                    width: 120px;
+                }
+
+                & h2 {
+                    font-size: 3rem;
+                }
+            }
+
+            & .cross {
+                position: relative;
+                top: 30px;
+                height: 40px; 
+            }
+        }
+    }
+
+    .ham {
+        display: flex;
+        height: 40px;
+        width: 40px;
+    }
+
+    .hbody {
+        width: 100%;
+        padding: 0 20px;
+
+        & ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            & li a {
+                color: white;
+                font-family: "Poppins", sans-serif;
+                font-size: 2.5rem;
+                font-weight: 700;
+            }
+        }
+    }
+
+    nav {
+        /* position: fixed; */
+        justify-content: space-between;
+        height: 70px;
+        padding: 0 40px;
+
+        & .navlinks {
+            display: none;
+        }
+    }
+
+    .herosection {
+        height: 110vh;
+    }
+
+    .container {
+        grid-template-columns: 90vw;
+    }
+
+    .box {
+        height: 60vh;
+    }
+
+    .ham{
+        position: relative;
+        /* right: 70px; */
+    }    
+    
+    .cross{
+        position: relative;
+        /* right: 70px; */
+    }
+
+    nav {
+        padding: 0 10vh;
+        /* width: 10vw; */
+    }
+}
+
+@media (max-width: 450px) {
+    .hmenu {
+        & .head {
+
+            & .hlogo {
+                gap: 20px;
+
+                & img {
+                    height: 70px;
+                    width: 70px;
+                }
+
+                & h2 {
+                    font-size: 2rem;
+                }
+            }
+
+            & .cross {
+                height: 30px;
+            }
+        }
+    }
+
+    .hbody {
+        & ul {
+            & li a {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    nav {
+        padding: 0 10px;
+    }
+
+    .wl {
+        margin: 40px 0 0 0;
+        clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 96%);
+    }
+
+    .wr {
+        clip-path: polygon(0 0, 100% 4%, 100% 96%, 0 100%);
+
+    }
+
+    footer {
+        gap: 50px;
+        padding: 20px 10px;
+    }
+
+    .footerTop {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .left {
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+
+        & .top {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            & img {
+                height: 120px;
+                width: 120px;
+            }
+        }
+
+        & .contact {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            gap: 10px;
+
+            & h3 {
+                font-size: 2rem;
+            }
+
+            & p {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .right {
+        flex-direction: column;
+        gap: 20px;
+
+        & h3 {
+            font-family: "Prompt", sans-serif;
+            font-size: 2rem;
+        }
+
+        & ul li a {
+            font-size: 1.5rem;
+        }
+    }
+
+    .ficon {
+        height: 20px;
+        width: 20px;
+    }
+
+    .footerBottom {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 370px) {
+    .ham {
+        height: 30px;
+        width: 30px;
+    }
+
+    .herosection {
+        & h1 {
+            font-size: 4.5rem;
+        }
+
+    }
+
+    footer {
+        gap: 30px;
+    }
+
+
+    .left {
+        & .top {
+            & img {
+                height: 100px;
+                width: 100px;
+            }
+        }
+
+        & .contact {
+            & h3 {
+                font-size: 1.8rem;
+            }
+
+            & p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .right {
+        & h3 {
+            font-size: 1.7rem;
+        }
+
+        & ul li a {
+            font-size: 1.2rem;
+        }
+    }
+
+    .footerBottom {
+        font-size: 0.6rem;
+    }
+}
