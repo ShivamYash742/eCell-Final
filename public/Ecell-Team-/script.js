@@ -169,7 +169,7 @@ gsap.from(".trigger-12",{
     duration: .1,
     opacity:0,
     scrollTrigger:{
-        trigger: ".content",
+        trigger: ".contents",
         start: "30% 80%",
         end: "40% 40%",
         scrub: 2,
