@@ -12,7 +12,7 @@ body {
     margin: 0;
     padding: 0;
     background-image: url("dark.jpg");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
     min-height: 100vh;
 }
@@ -25,6 +25,8 @@ body {
 .service {
     background-color: rgba(252, 250, 250, 0.1);
     border-radius: 40px 0 40px 0;
+    position:relative;
+    z-index: 1;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     height: 20%;
 }
@@ -267,4 +269,119 @@ display: flex;
     padding-right: 1rem;
 }
  
- 
+
+footer {
+    margin-bottom:0px;
+    background-color: rgb(11, 11, 113);
+    width: 100%;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    & .footerTop {
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.left {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    gap: 50px;
+
+    & .top {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & img {
+            height: 125px;
+            width: 135px;
+        }
+    }
+
+    & .contact {
+        & h3 {
+            display: flex;
+            font-family: "Prompt", sans-serif;
+            font-size: 1.6rem;
+            align-items: center;
+        }
+
+        & p {
+            font-family: "Poppins", sans-serif;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    width: 40%;
+
+    & ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 06px;
+
+        & li a {
+            font-family: "Poppins", sans-serif;
+            color: white;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+
+    & h3 {
+        font-family: "Prompt", sans-serif;
+        font-size: 1.6rem;
+    }
+}
+
+.ficon {
+    height: 20px;
+    width: 20px;
+}
+
+.footerMid {
+    background-color: white;
+    width: 90%;
+    height: 2px;
+}
+
+.footerBottom {
+    margin-bottom:0px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensures the body takes up the full height of the viewport */
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%; /* Makes the container span the full height */
+}
+
+main {
+    flex: 1; /* Pushes the footer to the bottom */
+}
+
+footer {
+    margin-top: auto; /* Automatically adjusts to stay at the bottom */
+}
