@@ -11,44 +11,41 @@
 </head>
 
 <body>
-    <!-- Mobile Menu -->
-    <div class="hmenu">
-        <div class="head">
-            <div class="hlogo">
-                <img src="images/logo.png" alt="Logo">
-                <h2>ECELL MSIT</h2>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="/">
+                    <img class="logo-img" src="/images/logo.png" alt="Logo">
+                </a>
             </div>
-            <img class="cross" src="images/cross.svg" alt="Close Menu">
+            <!-- Desktop Navigation -->
+            <div class="nav-links desktop-nav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/about" class="nav-link">About</a>
+                <a href="/events" class="nav-link">Events</a>
+                <a href="/team" class="nav-link">Team</a>
+                <a href="/services" class="nav-link">Services</a>
+                <a href="/contact" class="nav-link">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <svg class="hamburger-icon" viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+                <svg class="close-icon hidden" viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
         </div>
-        <div class="hbody">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/events">Events</a></li>
-                <li><a href="/team">Team</a></li>
-                <li><a href="/services">Services</a></li>
-                <li><a href="/contact">Contact Us</a></li>
-            </ul>
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/about" class="nav-link">About</a>
+            <a href="/events" class="nav-link">Events</a>
+            <a href="/team" class="nav-link">Team</a>
+            <a href="/services" class="nav-link">Services</a>
+            <a href="/contact" class="nav-link">Contact</a>
         </div>
-    </div>
-
-    <!-- Main Navigation -->
-    <nav>
-        <div class="navlogo">
-            <img src="images/logo.png" alt="Logo">
-            <h2>ECELL MSIT</h2>
-        </div>
-        <div class="navlinks">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/events">Events</a></li>
-                <li><a href="/team">Team</a></li>
-                <li><a href="/services">Services</a></li>
-                <li><a href="/contact">Contact Us</a></li>
-            </ul>
-        </div>
-        <img class="ham" src="images/ham.svg" alt="Menu">
     </nav>
     <section id="services" class="my-5">
         <div class="container">
@@ -162,6 +159,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/Ecell-service/scripts.js"></script>
+
 </body>
 
 </html>
