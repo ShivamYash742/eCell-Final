@@ -205,6 +205,8 @@ body {
 
 /* Mobile Navigation */
 .mobile-nav {
+    align-items: center;
+    width:-webkit-fill-available;
     display: none;
     background: white;
     padding: 1rem;
