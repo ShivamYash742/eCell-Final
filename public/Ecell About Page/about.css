@@ -170,8 +170,9 @@ p {
 
 
 .about-headers {
-    text-decoration: underline rgb(36, 152, 36);
-    text-underline-offset: 7px;
+    text-decoration:rgb(36, 152, 36);
+    text-underline-offset: 10px;
+    font-weight: bolder;
 }
 
 .about-cards {
