@@ -65,7 +65,41 @@
             <div class="heroOverlay"></div>
             <h1></h1>
         </div>
+        <h2 class="head">Featured Event</h2>
         <div class="eventsection">
+            <div class="feature-event-container">
+                <div class="show box highlight-event full-width-event">
+                    <h3>E-SUBMIT</h3>
+                    <div class="info">
+                        <h4>E-SUBMIT</h4>
+                        <p>The main motive of E-Summit held by E-Cell is to bring together budding entrepreneurs, industry leaders, investors, and innovators to inspire, educate, and empower students toward entrepreneurship.</p>
+                        <h5>Key Goals of E-Summit:</h5>
+                        <ul class="event-goals">
+                            <li><strong>Inspire:</strong> Through keynote speeches, panel discussions, and success stories of founders.</li>
+                            <li><strong>Educate:</strong> With workshops, masterclasses, and competitions that teach startup skills.</li>
+                            <li><strong>Connect:</strong> Provide networking opportunities between students, startups, mentors, and VCs.</li>
+                            <li><strong>Encourage Innovation:</strong> Platforms like pitch competitions and hackathons to showcase ideas.</li>
+                        </ul>
+                        <p class="event-summary">In short, E-Summit is a flagship event that fosters a strong entrepreneurial culture, bridging the gap between ideas and execution.</p>
+                        <div class="icons">
+                            <span>
+                                <img src="images/calendar.svg" alt="" srcset="">
+                                <p>Coming Soon</p>
+                            </span>
+                            <span class="regg">
+                                <img src="images/people.svg" alt="" srcset="">
+                                <span class="counter">0+</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <img src="images/esubmit.png" alt="E-Summit Event">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2 class="head">Other Events</h2>
+        <div class="events-grid-section">
             <div class="container">
                 <div class="show box">
                     <h3>PATENTS AND COPYRIGHT SESSION</h3>
@@ -96,7 +130,7 @@
                     <div class="info">
                         <h4>MASTERS ABROAD SESSION</h4>
                         <p>The E-Cell MSIT organized a seminar on 30th August 2024, featuring Mr. Naveen Rai from Hello
-                            Study Global, who provided insights into pursuing a Master’s degree abroad. The session
+                            Study Global, who provided insights into pursuing a Master's degree abroad. The session
                             covered the benefits of studying overseas, guidance for Ivy League applications, and global
                             career opportunities. The interactive Q&A session allowed participants to seek tailored
                             advice and clarified doubts, making the seminar highly impactful and engaging.</p>
@@ -145,7 +179,7 @@
                     <div class="info">
                         <h4>ECE ORIENTATION</h4>
                         <p>The orientation concluded with vibrant audience engagement, strengthening team bonds and
-                            offering valuable insights to budding entrepreneurs and students. The eCell MSIT team’s
+                            offering valuable insights to budding entrepreneurs and students. The eCell MSIT team's
                             dedication, marked by tireless effort, culminated in a resounding success, resulting in a
                             fun and informative event guided by the exemplary leadership of the eCell convener Mrs Neeru
                             Rathee mam , President Shaurya Mishra and Vice President Harshika Drall.</p>
@@ -216,64 +250,65 @@
             <div id="load-more"> Load More </div>
         </div>
         
-    <h2 class ="head" >Social Feed</h2>
-    <div class="container" id="postContainer">
-        <% posts.slice(0, 3).forEach(post => { %>
-            <div class="post">
-                <div class="image-container">
-                    <img src="<%= post.local_image_url %>" 
-                         alt="Instagram Post"
-                         onerror="this.src='/images/placeholder.jpg'">
-                </div>
-                <div class="content">
-                    <p class="caption"><%= post.caption %></p>
-                    <a href="<%= post.post_url %>" target="_blank" rel="noopener noreferrer" class="post-link">
-                        View on Instagram →
-                    </a>
-                </div>
+        <div class="social-feed-section">
+            <h2 class="head">Social Feed</h2>
+            <div class="container" id="postContainer">
+                <% posts.slice(0, 3).forEach(post => { %>
+                    <div class="post">
+                        <div class="image-container">
+                            <img src="<%= post.local_image_url %>" 
+                                alt="Instagram Post"
+                                onerror="this.src='/images/placeholder.jpg'">
+                        </div>
+                        <div class="content">
+                            <p class="caption"><%= post.caption %></p>
+                            <a href="<%= post.post_url %>" target="_blank" rel="noopener noreferrer" class="post-link">
+                                View on Instagram →
+                            </a>
+                        </div>
+                    </div>
+                <% }) %>
             </div>
-        <% }) %>
-    </div>
-    <div class="load-more"  style="margin-left: auto; margin-right: auto; display: block; width: fit-content;">
-        <button onclick="loadMore()">Load More</button>
-    </div>
+            <div class="load-more" style="margin-left: auto; margin-right: auto; display: block; width: fit-content;">
+                <button onclick="loadMore()">Load More</button>
+            </div>
+        </div>
 
-    <script>
-        let currentIndex = 3;
-        const posts = <%- JSON.stringify(posts) %>;
-        const postContainer = document.getElementById('postContainer');
+        <script>
+            let currentIndex = 3;
+            const posts = JSON.parse('<%- JSON.stringify(posts) %>');
+            const postContainer = document.getElementById('postContainer');
 
-        function loadMore() {
-            const remainingPosts = posts.slice(currentIndex, currentIndex + 2); // Load one card at a time
-            remainingPosts.forEach(post => {
-                const postElement = document.createElement('div');
-                postElement.classList.add('post');
-                postElement.innerHTML = `
-                    <div class="image-container">
-                        <img src="${post.local_image_url}" 
-                             alt="Instagram Post" 
-                             onerror="this.src='/images/placeholder.jpg'">
-                    </div>
-                    <div class="content">
-                        <p class="caption">${post.caption}</p>
-                        <a href="${post.post_url}" target="_blank" rel="noopener noreferrer" class="post-link">
-                            View on Instagram →
-                        </a>
-                    </div>
-                `;
-                postContainer.appendChild(postElement);
-            });
+            function loadMore() {
+                const remainingPosts = posts.slice(currentIndex, currentIndex + 2); // Load one card at a time
+                remainingPosts.forEach(post => {
+                    const postElement = document.createElement('div');
+                    postElement.classList.add('post');
+                    postElement.innerHTML = `
+                        <div class="image-container">
+                            <img src="${post.local_image_url}" 
+                                alt="Instagram Post" 
+                                onerror="this.src='/images/placeholder.jpg'">
+                        </div>
+                        <div class="content">
+                            <p class="caption">${post.caption}</p>
+                            <a href="${post.post_url}" target="_blank" rel="noopener noreferrer" class="post-link">
+                                View on Instagram →
+                            </a>
+                        </div>
+                    `;
+                    postContainer.appendChild(postElement);
+                });
 
-            currentIndex += 2;
-            if (currentIndex >= posts.length) {
-                const loadMoreButton = document.querySelector('.load-more button');
-                if (loadMoreButton) {
-                    loadMoreButton.style.display = 'none'; // Hide the button
+                currentIndex += 2;
+                if (currentIndex >= posts.length) {
+                    const loadMoreButton = document.querySelector('.load-more button');
+                    if (loadMoreButton) {
+                        loadMoreButton.style.display = 'none'; // Hide the button
+                    }
                 }
             }
-        }
-        
-    </script>
+        </script>
         <div class="gallery">
             <h2>Gallery</h2>
             <div class="carousels">
